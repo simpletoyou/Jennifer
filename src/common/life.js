@@ -2,7 +2,7 @@
  * @Author: chenchuhua 3361694095@qq.com
  * @Date: 2022-08-05 16:21:58
  * @LastEditors: chenchuhua 3361694095@qq.com
- * @LastEditTime: 2022-08-08 11:07:38
+ * @LastEditTime: 2022-08-08 13:48:30
  * @FilePath: \shushu\src\common\life.js
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
@@ -67,8 +67,8 @@ const life =
     {
       name: 'Autumn',
       content: {
-        title: '',
-        desc: '',
+        title: '是秋',
+        desc: '莫辜负岁月与霞光。',
         writes: [
           {
             title: '',
@@ -84,8 +84,8 @@ const life =
     {
       name: 'Winter',
       content: {
-        title: '',
-        desc: '',
+        title: '是冬呀',
+        desc: '莫辜负岁月与霞光。',
         writes: [
           {
             title: '',

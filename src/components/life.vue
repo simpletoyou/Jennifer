@@ -2,7 +2,7 @@
  * @Author: chenchuhua 3361694095@qq.com
  * @Date: 2022-08-05 09:26:22
  * @LastEditors: chenchuhua 3361694095@qq.com
- * @LastEditTime: 2022-08-08 11:08:07
+ * @LastEditTime: 2022-08-08 11:36:21
  * @FilePath: \nft-adminf:\my\shushu\src\components\life.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -24,7 +24,12 @@
             <div class="desc">{{ item.content.desc }}</div>
             <div class="writesBox">
               <div class="write" v-for="(i, idx) in item.content.writes" :key="idx">
-                <div class="title">{{ i.title }}</div>
+                <div class="title">
+                  <div class="line lineLeft"></div>
+                  {{ i.title }}
+                  <div class="line lineRight"></div>
+
+                </div>
                 <div class="time">{{ i.time }}</div>
                 <div class="author">{{ i.author }}</div>
                 <div class="writeContent">
@@ -155,7 +160,6 @@ export default {
           padding: .3rem .2rem;
           margin-bottom: .3rem;
 
-
           .name {
             font-size: .8rem;
             line-height: 2rem;
@@ -178,6 +182,8 @@ export default {
             align-content: center;
             justify-content: space-between;
             padding: .4rem 0;
+            overflow-x: scroll;
+
 
             .write {
               display: flex;
@@ -186,10 +192,27 @@ export default {
               margin-right: .3rem;
               width: 5rem;
               text-align: center;
+              padding: .2rem .1rem;
 
               .title {
                 font-size: .2rem;
                 line-height: .4rem;
+
+                .line {
+                  width: 73px;
+                  height: 2px;
+                  position: relative;
+                }
+
+                .lineLeft {
+                  margin-right: 7px;
+                  background: linear-gradient(133deg, #39373d, #f7e0bb);
+                }
+
+                .lineRight {
+                  margin-left: 7px;
+                  background: linear-gradient(133deg, #f7e0bb, #39373d);
+                }
               }
 
               .time,
@@ -199,7 +222,7 @@ export default {
 
               .writeContent {
                 display: flex;
-               flex-direction: column;
+                flex-direction: column;
 
                 .imgBox {
                   width: 100%;
@@ -217,7 +240,10 @@ export default {
                 }
 
                 .article {
-                  font-size: .16rem;
+                  font-size: .14rem;
+                  line-height: .28rem;
+                  text-align: left;
+                  text-indent: 2em;
                 }
               }
             }
