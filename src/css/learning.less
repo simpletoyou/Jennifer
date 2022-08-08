@@ -1,0 +1,75 @@
+@line: 30px;
+@color: #FFF;
+@bg: #d9d9d9;
+@font: 16px;
+
+.learn-container {
+  line-height: @line;
+  position: relative;
+  background:#000;
+
+  li {
+    color: @color;
+    display: inline-block;
+    color: #FFF;
+    text-decoration: none;
+    font-size: @font;
+    margin-right: 30px;
+    cursor: pointer;
+  }
+
+  .banner {
+    filter: brightness(0.6);
+    width: 100%;
+    background: url(https://cn-south-227-storage-hitokoto-19627663.oss.dogecdn.com/pic/qf3cu.jpg) center no-repeat;
+    background-size: cover
+  }
+  
+  article {
+    color: #FFF;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    .inner-box {
+      margin-top: 5%;
+      max-width: 1000px;
+      display: flex;
+      flex-direction: column;
+      .card {
+        border: 1px solid #333;
+        padding: 5px 10px;
+        margin-bottom: 40px;
+
+        .card-title {
+          line-height: 40px;
+          font-weight: 500;
+          color: #ededed;
+        }
+        .card-details {
+          display: flex;
+          align-items: center;
+          padding: 5px 0;
+          .card-details__img {
+            width: 20px;
+            height: 20px;
+          }
+          .card-details__author {
+            font-size: 14px;
+            color: #ccc;
+
+            margin: 0 10px 0 5px;
+          }
+          .card-details__time {
+            color: #ccc;
+            font-size: 14px;
+          }
+        }
+        .card-content {
+          font-size: 14px;
+          color: #d6d6d6;
+          line-height: 20px;
+        }
+      }
+    }
+  }
+}

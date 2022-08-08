@@ -1,0 +1,64 @@
+@line: 30px;
+  @color: #FFF;
+  @bg: #d9d9d9;
+  @font: 16px;
+
+  .saying-container {
+    line-height: @line;
+    position: relative;
+    color: #FFF;
+
+    li {
+      color: @color;
+      display: inline-block;
+      color: #FFF;
+      text-decoration: none;
+      font-size: @font;
+      margin-right: 30px;
+      cursor: pointer;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: absolute;
+      top: 0;
+      width: 96%;
+      padding: 0 2%;
+    }
+
+    .banner {
+      filter: brightness(0.6);
+      width: 100%;
+      background: url(https://cn-south-227-storage-hitokoto-19627663.oss.dogecdn.com/pic/qf3cu.jpg) center no-repeat;
+      background-size: cover
+    }
+
+    article {
+      position: absolute;
+      top:  38%;
+      width: 94%;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      padding: 0 3%;
+
+      .main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 2.6rem;
+
+        .text {
+          padding: 0 20px;
+          line-height: 3.75rem;
+        }
+      }
+
+      .from {
+        font-size: 18px;
+        margin-top: 32px;
+      }
+    }
+  }
