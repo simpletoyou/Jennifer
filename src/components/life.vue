@@ -2,7 +2,7 @@
  * @Author: chenchuhua 3361694095@qq.com
  * @Date: 2022-08-05 09:26:22
  * @LastEditors: chenchuhua 3361694095@qq.com
- * @LastEditTime: 2022-08-08 11:36:21
+ * @LastEditTime: 2022-08-08 17:02:41
  * @FilePath: \nft-adminf:\my\shushu\src\components\life.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -48,6 +48,54 @@
     <page-footer></page-footer>
   </div>
 </template>
+
+
+
+<!-- .popular-articles:after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 3rem;
+    bottom: 3.6rem;
+    width: 5px;
+    border-radius: 5px;
+    background: linear-gradient(130deg,#ff7a18,#af002d 41.07%,#319197 76.05%);
+    box-shadow: -10px 0 20px 3px #000;
+} -->
+
+
+<!-- 
+.card:before{
+    z-index: -1;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    border-radius: 20px;
+    filter: blur(0px) opacity(1);
+    transition: filter 200ms linear, transform 200ms linear;
+}
+
+这里不能将滤镜直接加在.card元素，而是将背景和滤镜都加在伪类上。
+因为，父元素加了滤镜，它的子元素都会一起由该滤镜改变。
+如果滤镜直接加在.card元素上，会导致上面的文字也变模糊。
+
+
+通过css选择器选出非hover的.card元素，给其伪类添加模糊、透明度和明暗度的滤镜 
+
+.cards:hover > .card:not(:hover):before{    
+  filter: blur(5px) opacity(0.8) brightness(0.8);
+}
+
+对于hover的元素，其伪类增强饱和度，尺寸放大
+
+.card:hover:before{
+  filter: saturate(1.2);  
+  transform: scale(1.05);
+} -->
+
 
 <script>
 import pageHeader from './pageHeader.vue'
@@ -248,20 +296,11 @@ export default {
               }
             }
 
-
-
-
           }
         }
       }
 
-
     }
-
-
-
-
-
   }
 }
 </style>
