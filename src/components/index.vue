@@ -31,6 +31,10 @@
         </div>
       </div>
     </article>
+
+    <div class="goTop" :class="isTop ? 'goTopAfter' : ''" @click="goTop()">
+      <div class="triangle"></div>
+    </div>
     <!-- 公共尾部 -->
     <page-footer></page-footer>
   </div>
@@ -44,6 +48,9 @@ export default {
   data() {
     return {
       currentDate: '',
+      scrollNum: 0, //滚动距离
+      isTop: false, //是否显示回到顶部按钮
+      myTimer: -1, //防止点击事件过度
       cards: [
         {
           img: require('../assets/index/rolls.jpg'),
@@ -68,6 +75,19 @@ export default {
     pageFooter,
   },
   mounted() {
+
+    window.addEventListener("scroll", () => {
+      let top =
+        document.documentElement.scrollTop ||
+        document.body.scrollTop ||
+        window.pageYOffset;
+      this.scrollNum = top;
+      if (top >= 300) {
+        this.isTop = true;
+      } else {
+        this.isTop = false;
+      }
+    });
   },
   async created() {
     this.getDate()
@@ -83,7 +103,20 @@ export default {
       let m = date_.getMonth() + 1;
       let d = date_.getDate();
       this.currentDate = `${y}-${m < 10 ? '0' + m : m}-${d < 10 ? '0' + d : d}`
-    }
+    },
+    goTop() {
+      if (this.myTimer == -1) {
+        this.myTimer = setInterval(() => {
+          this.scrollNum -= 50;
+          if (this.scrollNum <= 0) {
+            this.scrollNum = 0;
+            window.clearInterval(this.myTimer); //停止执行
+            this.myTimer = -1;
+          }
+          window.scrollTo(0, this.scrollNum); //离开网页顶部的距离
+        }, 10);
+      }
+    },
   },
 };
 </script>
@@ -229,6 +262,7 @@ export default {
             display: flex;
             align-items: center;
             justify-content: center;
+
             img {
               width: .2rem;
               height: .2rem;
@@ -272,6 +306,47 @@ export default {
 
       }
     }
+  }
+
+  // 返回顶部按钮
+  .goTop {
+    position: fixed;
+    bottom: -1rem;
+    right: 5%;
+    width: .6rem;
+    height: .6rem;
+    border-radius: .3rem;
+    z-index: 10;
+    background-color: @lightTheme;
+    transition: 0.3s ease-in-out;
+    font-size: .3rem;
+    text-align: center;
+    line-height: .6rem;
+    color: #ffffff;
+    transition: .5s ease-in-out;
+    cursor: pointer;
+
+
+    .triangle {
+      width: 0;
+      height: 0;
+      border-top: .14rem solid transparent;
+      border-bottom: .14rem solid #FFF;
+      border-left: .1rem solid transparent;
+      border-right: .1rem solid transparent;
+      border-radius: 4px;
+      
+    }
+  }
+
+  .goTop:hover {
+    background-color: #8fd1b4;
+    transition: .3s ease-in-out;
+  }
+
+  .goTopAfter {
+    transition: .5s ease-in-out;
+    bottom: 1rem;
   }
 }
 </style>
