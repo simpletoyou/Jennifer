@@ -2,7 +2,7 @@
  * @Author: chenchuhua 3361694095@qq.com
  * @Date: 2022-08-08 09:45:26
  * @LastEditors: chenchuhua 3361694095@qq.com
- * @LastEditTime: 2022-08-08 13:59:01
+ * @LastEditTime: 2022-08-09 14:42:43
  * @FilePath: \Jennifer\src\components\saying.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -22,10 +22,52 @@
       </div>
       <div class="from">——&nbsp;{{ says.from }}</div>
     </article>
+
+
+
+
+
+    <!-- <div class="demo">
+      <css-doodle>
+        :doodle {
+        @grid: 10 / 100%;
+        }
+
+        background: hsl(120,100%,90%);
+
+        transform: translate(
+        @rand(-50vw, 50vw),
+        @rand(-50vh, 50vh)
+        );
+
+        @size: 1vmin;
+        @shape: circle;
+        @place-cell: 50% 50%;
+
+        animation-name: move;
+        animation-iteration-count: infinite;
+        animation-direction: reverse;
+        animation-duration: calc(@rand(5s, 20s, .1));
+        animation-delay: calc(@rand(-5s, -1s, .1));
+        animation-timing-function:
+        cubic-bezier(.84, .02, 1, 1);
+        box-shadow: 0 0 1px #fff, 0 0 3px #fff, 0 0 10px #fff;
+        zoom: @r(.1, 5, 3);
+        @keyframes move {
+        100% {
+        transform: rotate(0) translate3d(0, 0, 0);
+        }
+        }
+
+      </css-doodle>
+    </div> -->
+
+
   </div>
 </template>
 
 <script>
+// import CSSDoodle from 'css-doodle'
 
 import pageHeader from './pageHeader.vue'
 import axios from "axios"
@@ -78,7 +120,7 @@ export default {
 
   article {
     position: absolute;
-    top: 38%;
+    top: 42%;
     width: 94%;
     text-align: center;
     display: flex;

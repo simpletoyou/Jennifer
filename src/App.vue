@@ -4,7 +4,7 @@
  * @Author: chenchuhua
  * @Date: 2021-04-22 14:26:50
  * @LastEditors: chenchuhua 3361694095@qq.com
- * @LastEditTime: 2022-08-04 17:21:31
+ * @LastEditTime: 2022-08-09 14:24:23
 -->
 <template>
   <!-- 设置粒子背景 -->
@@ -18,12 +18,27 @@
 </template>
 
 <script>
+
 export default {
   name: 'App'
 }
 </script>
 
 <style>
+
+.demo {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  min-height: 380px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #0a0c27;
+}
+
+
 .particles-js-canvas-el {
   /* height: calc(100% - 100px) !important; */
   position: absolute;
