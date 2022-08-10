@@ -2,7 +2,7 @@
  * @Author: chenchuhua 3361694095@qq.com
  * @Date: 2022-08-05 09:26:22
  * @LastEditors: chenchuhua 3361694095@qq.com
- * @LastEditTime: 2022-08-08 17:02:41
+ * @LastEditTime: 2022-08-10 11:03:06
  * @FilePath: \nft-adminf:\my\shushu\src\components\life.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -17,7 +17,6 @@
           <span></span>
           {{ lifeData.year }}
         </div>
-        <!-- -->
         <div class="seasonsBox">
           <div class="season" v-for="(item, index) in lifeData.seasons" :key="index">
             <div class="name">{{ item.content.title }}</div>
@@ -40,7 +39,6 @@
                 </div>
               </div>
             </div>
-
           </div>
         </div>
       </div>
@@ -48,8 +46,6 @@
     <page-footer></page-footer>
   </div>
 </template>
-
-
 
 <!-- .popular-articles:after {
     content: "";
@@ -113,8 +109,6 @@ export default {
   },
   mounted() {
     this.lifeData = this.$lifes.life;
-    console.log('lifeData', this.lifeData);
-
   },
   methods: {
   }
@@ -146,6 +140,7 @@ export default {
         display: flex;
         justify-content: center;
         align-items: center;
+        margin-bottom: .6rem;
 
         span {
           position: absolute;
@@ -237,6 +232,7 @@ export default {
               display: flex;
               flex-direction: column;
               border: 1px solid #FFF;
+              border-radius: 4px;
               margin-right: .3rem;
               width: 5rem;
               text-align: center;
@@ -245,6 +241,9 @@ export default {
               .title {
                 font-size: .2rem;
                 line-height: .4rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
 
                 .line {
                   width: 73px;

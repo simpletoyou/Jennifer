@@ -1,0 +1,18 @@
+@font-face {
+  font-family: 'mk';
+  src: url(./mk.otf);
+}
+
+@font-face {
+  font-family: 'ssr';
+  src: url(./ssr.ttf);
+}
+
+@font-face {
+  font-family: 'ch';
+  src: url(./ch.ttf);
+}
+@font-face {
+  font-family: 'rs';
+  src: url(./rs.otf);
+}

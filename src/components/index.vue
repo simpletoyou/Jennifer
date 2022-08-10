@@ -31,7 +31,6 @@
         </div>
       </div>
     </article>
-
     <div class="goTop" :class="isTop ? 'goTopAfter' : ''" @click="goTop()">
       <div class="triangle"></div>
     </div>
@@ -54,17 +53,17 @@ export default {
       cards: [
         {
           img: require('../assets/index/rolls.jpg'),
-          title: '学习',
+          title: 'Keep learning',
           desc: 'I still keep thinking about how an entire life can seemingly amount to nothing. I guess the sad truth is, not everyone will accomplish something great.  Some of us may just have to find meaning in the little moments that make up life.'
         },
         {
           img: require('../assets/index/cups.jpg'),
-          title: '生活',
+          title: 'Meet by chance',
           desc: 'I still keep thinking about how an entire life can seemingly amount to nothing. I guess the sad truth is, not everyone will accomplish something great.  Some of us may just have to find meaning in the little moments that make up life.'
         },
         {
           img: require('../assets/index/plant.jpg'),
-          title: '句子',
+          title: 'Nice words',
           desc: 'I still keep thinking about how an entire life can seemingly amount to nothing. I guess the sad truth is, not everyone will accomplish something great.  Some of us may just have to find meaning in the little moments that make up life.'
         }
       ]
@@ -75,7 +74,6 @@ export default {
     pageFooter,
   },
   mounted() {
-
     window.addEventListener("scroll", () => {
       let top =
         document.documentElement.scrollTop ||
@@ -91,8 +89,8 @@ export default {
   },
   async created() {
     this.getDate()
-    this.subPageData1 = this.$datas.subPageData1;
-    this.subPageData2 = this.$datas.subPageData2;
+    // this.subPageData1 = this.$datas.subPageData1;
+    // this.subPageData2 = this.$datas.subPageData2;
   },
   methods: {
     // 获取当前日期
@@ -157,8 +155,10 @@ export default {
 
         .name {
           margin-top: 1.5rem;
-          font-size: .4rem;
+          font-size: .8rem;
           line-height: 1rem;
+          font-family: 'ch';
+
         }
 
         .desc {
@@ -189,7 +189,7 @@ export default {
       margin: 2rem 0;
       background: #FFF;
       color: @themeColor;
-      font-size: .6rem;
+      font-size: .8rem;
       text-align: center;
     }
 
@@ -230,6 +230,7 @@ export default {
 
           .desc {
             line-height: .32rem;
+
           }
 
           // img {
@@ -335,7 +336,8 @@ export default {
       border-left: .1rem solid transparent;
       border-right: .1rem solid transparent;
       border-radius: 4px;
-      
+      transform: translate(.2rem, .09rem);
+
     }
   }
 

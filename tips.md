@@ -4,7 +4,7 @@
  * @Author: chenchuhua
  * @Date: 2021-05-12 15:16:53
  * @LastEditors: chenchuhua 3361694095@qq.com
- * @LastEditTime: 2022-08-08 11:09:28
+ * @LastEditTime: 2022-08-10 09:39:19
 -->
 # img v-for拿不到图片
     img: require("../assets/banner/banner9.jpg")
@@ -96,3 +96,24 @@ Vue.prototype.$datas = datas
         </div> 
 # html5 语义元素
     header nav section article aside footer details summary
+
+# vue引入ttf
+    1. 下载ttf文件
+    2. 新建font文件夹存放ttf，创建font.css
+        ```
+            @font-face {
+                font-family: 'mk';
+                src: url(./mk.otf);
+            }
+
+            @font-face {
+                font-family: 'ssr';
+                src: url(./ssr.ttf);
+            }
+        ```
+    3. 在main.js引入font.css
+        ```
+            import '../src/common/font/font.css'
+        ```
+    4. css中即可使用
+        font-family: 'mk';
