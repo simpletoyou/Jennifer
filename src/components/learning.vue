@@ -3,8 +3,8 @@
  * @version: 
  * @Author: chenchuhua
  * @Date: 2021-04-22 14:26:50
- * @LastEditors: chenchuhua
- * @LastEditTime: 2021-05-14 16:13:46
+ * @LastEditors: chenchuhua 3361694095@qq.com
+ * @LastEditTime: 2022-08-16 11:15:36
 -->
 <template>
   <div class="learn-container">
@@ -17,41 +17,124 @@
     <article>
       <div class="inner-box">
         <div class="card" v-for="(item, index) in list" :key="index">
-          <span class="card-title">{{item.title}}</span>
+          <span class="card-title">{{ item.title }}</span>
           <div class="card-details" style="display: flex;">
-              <img class="card-details__img" src="../assets/index/music.svg" alt="">
-              <span class="card-details__author">{{item.author}}</span>
-              <span class="card-details__time">{{item.time}}</span>
+            <img class="card-details__img" src="../assets/index/music.svg" alt="">
+            <span class="card-details__author">{{ item.author }}</span>
+            <span class="card-details__time">{{ item.time }}</span>
           </div>
-          <span class="card-content">{{item.content}}</span>
+          <span class="card-content">{{ item.content }}</span>
         </div>
       </div>
     </article>
+    <page-footer></page-footer>
   </div>
 </template>
 
 <script>
-  import pageHeader from './pageHeader.vue'
-  export default {
-    data() {
-      return {
-        says: '',
-        winHeight: '',
-        list: '',//获取学习卡片数据
-      }
-    },
-    components: {
-      pageHeader
-    },
-    mounted() {
-      this.winHeight = window.innerHeight + 'px'
-    },
-    created() {
-      this.list = this.$datas.learnDatas
+import PageFooter from './pageFooter.vue'
+import pageHeader from './pageHeader.vue'
+export default {
+  data() {
+    return {
+      says: '',
+      winHeight: '',
+      list: '',//获取学习卡片数据
     }
+  },
+  components: {
+    pageHeader,
+    PageFooter
+  },
+  mounted() {
+    this.winHeight = window.innerHeight + 'px'
+  },
+  created() {
+    this.list = this.$datas.learnDatas
   }
+}
 </script>
 
 <style lang="less">
-@import "../css/learning.less";
+@line: 30px;
+@color: #FFF;
+@bg: #d9d9d9;
+@font: 16px;
+
+.learn-container {
+  line-height: @line;
+  position: relative;
+
+  li {
+    color: @color;
+    display: inline-block;
+    color: #FFF;
+    text-decoration: none;
+    font-size: @font;
+    margin-right: 30px;
+    cursor: pointer;
+  }
+
+  .banner {
+    filter: brightness(0.6);
+    width: 100%;
+    background: url(https://cn-south-227-storage-hitokoto-19627663.oss.dogecdn.com/pic/qf3cu.jpg) center no-repeat;
+    background-size: cover;
+  }
+
+  article {
+    color: #FFF;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    .inner-box {
+      margin-top: 5%;
+      max-width: 1000px;
+      display: flex;
+      flex-direction: column;
+
+      .card {
+        border: 1px solid #333;
+        padding: 5px 10px;
+        margin-bottom: 40px;
+
+        .card-title {
+          line-height: 40px;
+          font-weight: 500;
+          color: #ededed;
+        }
+
+        .card-details {
+          display: flex;
+          align-items: center;
+          padding: 5px 0;
+
+          .card-details__img {
+            width: 20px;
+            height: 20px;
+          }
+
+          .card-details__author {
+            font-size: 14px;
+            color: #ccc;
+
+            margin: 0 10px 0 5px;
+          }
+
+          .card-details__time {
+            color: #ccc;
+            font-size: 14px;
+          }
+        }
+
+        .card-content {
+          font-size: 14px;
+          color: #d6d6d6;
+          line-height: 20px;
+        }
+      }
+    }
+  }
+}
 </style>

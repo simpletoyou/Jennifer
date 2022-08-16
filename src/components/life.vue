@@ -2,7 +2,7 @@
  * @Author: chenchuhua 3361694095@qq.com
  * @Date: 2022-08-05 09:26:22
  * @LastEditors: chenchuhua 3361694095@qq.com
- * @LastEditTime: 2022-08-10 11:03:06
+ * @LastEditTime: 2022-08-16 16:59:01
  * @FilePath: \nft-adminf:\my\shushu\src\components\life.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -291,6 +291,15 @@ export default {
                   line-height: .28rem;
                   text-align: left;
                   text-indent: 2em;
+                  overflow: hidden;
+                  display: -webkit-box;
+                  /*弹性伸缩盒子*/
+                  -webkit-box-orient: vertical;
+                  /*子元素垂直排列*/
+                  -webkit-line-clamp: 6;
+                  /*可以显示的行数，超出部分用...表示*/
+                  text-overflow: ellipsis;
+                  /*（多行文本的情况下，用省略号“…”隐藏溢出范围的文本)*/
                 }
               }
             }

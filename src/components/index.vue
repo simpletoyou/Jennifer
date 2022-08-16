@@ -152,12 +152,13 @@ export default {
       .infoBox {
         position: relative;
         width: 7.5rem;
+        font-family: 'ch';
+
 
         .name {
           margin-top: 1.5rem;
           font-size: .8rem;
           line-height: 1rem;
-          font-family: 'ch';
 
         }
 
@@ -191,6 +192,8 @@ export default {
       color: @themeColor;
       font-size: .8rem;
       text-align: center;
+      font-family: 'ch';
+
     }
 
     .menuBox {
