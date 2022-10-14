@@ -4,7 +4,7 @@
  * @Author: chenchuhua
  * @Date: 2021-04-22 14:26:50
  * @LastEditors: chenchuhua 3361694095@qq.com
- * @LastEditTime: 2022-08-16 11:15:36
+ * @LastEditTime: 2022-09-30 15:32:26
 -->
 <template>
   <div class="learn-container">
@@ -16,15 +16,17 @@
     <!-- 页面主体 -->
     <article>
       <div class="inner-box">
-        <div class="card" v-for="(item, index) in list" :key="index">
-          <span class="card-title">{{ item.title }}</span>
-          <div class="card-details" style="display: flex;">
-            <img class="card-details__img" src="../assets/index/music.svg" alt="">
-            <span class="card-details__author">{{ item.author }}</span>
-            <span class="card-details__time">{{ item.time }}</span>
-          </div>
-          <span class="card-content">{{ item.content }}</span>
-        </div>
+        
+            <div class="card" v-for="(item, index) in list" :key="index">
+              <span class="card-title">{{ item.title }}</span>
+              <div class="card-details" style="display: flex;">
+                <img class="card-details__img" src="../assets/index/music.svg" alt="">
+                <span class="card-details__author">{{ item.author }}</span>
+                <span class="card-details__time">{{ item.time }}</span>
+              </div>
+              <span class="card-content">{{ item.content }}</span>
+            </div>
+         
       </div>
     </article>
     <page-footer></page-footer>
@@ -34,6 +36,7 @@
 <script>
 import PageFooter from './pageFooter.vue'
 import pageHeader from './pageHeader.vue'
+
 export default {
   data() {
     return {
@@ -48,6 +51,8 @@ export default {
   },
   mounted() {
     this.winHeight = window.innerHeight + 'px'
+
+   
   },
   created() {
     this.list = this.$datas.learnDatas
@@ -89,15 +94,16 @@ export default {
     justify-content: center;
 
     .inner-box {
-      margin-top: 5%;
+      margin-top: 8%;
       max-width: 1000px;
       display: flex;
       flex-direction: column;
 
       .card {
-        border: 1px solid #333;
-        padding: 5px 10px;
+        border: 1px solid #FFF;
+        padding: 10px 20px;
         margin-bottom: 40px;
+        border-radius: .1rem;
 
         .card-title {
           line-height: 40px;

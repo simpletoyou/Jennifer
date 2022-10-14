@@ -206,9 +206,10 @@ export default {
         display: flex;
         align-items: stretch;
         justify-content: space-between;
+        margin-bottom: 1rem;
 
         img {
-          width: 6.5rem;
+          width: 5rem;
           height: auto;
         }
 

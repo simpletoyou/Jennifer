@@ -2,7 +2,7 @@
  * @Author: chenchuhua 3361694095@qq.com
  * @Date: 2022-08-05 09:26:22
  * @LastEditors: chenchuhua 3361694095@qq.com
- * @LastEditTime: 2022-08-16 16:59:01
+ * @LastEditTime: 2022-09-30 15:38:53
  * @FilePath: \nft-adminf:\my\shushu\src\components\life.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -18,24 +18,28 @@
           {{ lifeData.year }}
         </div>
         <div class="seasonsBox">
+
           <div class="season" v-for="(item, index) in lifeData.seasons" :key="index">
             <div class="name">{{ item.content.title }}</div>
             <div class="desc">{{ item.content.desc }}</div>
-            <div class="writesBox">
-              <div class="write" v-for="(i, idx) in item.content.writes" :key="idx">
-                <div class="title">
-                  <div class="line lineLeft"></div>
-                  {{ i.title }}
-                  <div class="line lineRight"></div>
+            <div class="writesBox" :class="'swiper-container'+index" style="width: 600px; height: 300px;">
+              <div class="swiper-wrapper" style="border:2px solid red;width: 100%;">
 
-                </div>
-                <div class="time">{{ i.time }}</div>
-                <div class="author">{{ i.author }}</div>
-                <div class="writeContent">
-                  <div class="imgBox">
-                    <img v-for="(item, index) in imgs" :key="index" :src="item" alt="">
+                <div class="write swiper-slide" v-for="(i, idx) in item.content.writes" :key="idx">
+                  <div class="title">
+                    <div class="line lineLeft"></div>
+                    {{ i.title }}
+                    <div class="line lineRight"></div>
+
                   </div>
-                  <div class="article">{{ i.article }}</div>
+                  <div class="time">{{ i.time }}</div>
+                  <div class="author">{{ i.author }}</div>
+                  <!-- <div class="writeContent">
+                    <div class="imgBox">
+                      <img v-for="(item, index) in imgs" :key="index" :src="item" alt="">
+                    </div>
+                    <div class="article">{{ i.article }}</div>
+                  </div> -->
                 </div>
               </div>
             </div>
@@ -96,6 +100,8 @@
 <script>
 import pageHeader from './pageHeader.vue'
 import pageFooter from './pageFooter.vue'
+import Swiper from "swiper";
+
 export default {
   data() {
     return {
@@ -109,6 +115,14 @@ export default {
   },
   mounted() {
     this.lifeData = this.$lifes.life;
+
+    for (let i = 0; i < 4; i++) {
+      console.log({ i });
+      new Swiper('.swiper-container' + i, {
+        autoplay: 5000,//可选选项，自动滑动
+        loop: true,//可选选项，开启循环
+      })
+    }
   },
   methods: {
   }
