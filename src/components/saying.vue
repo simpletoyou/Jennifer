@@ -1,11 +1,4 @@
-<!--
- * @Author: chenchuhua 3361694095@qq.com
- * @Date: 2022-08-08 09:45:26
- * @LastEditors: chenchuhua 3361694095@qq.com
- * @LastEditTime: 2022-08-16 17:02:22
- * @FilePath: \Jennifer\src\components\saying.vue
- * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
--->
+
 <template>
   <div class="saying-container">
     <!-- 背景图 -->

@@ -1,11 +1,12 @@
 <!--
- * @Author: chenchuhua 3361694095@qq.com
- * @Date: 2022-08-03 16:17:48
- * @LastEditors: chenchuhua 3361694095@qq.com
- * @LastEditTime: 2022-08-04 17:28:48
- * @FilePath: \shushu\src\components\pageFooter.vue
- * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+ * @Descripttion: 
+ * @version: 
+ * @Author: Jennifer
+ * @Date: 2022-08-08 09:45:26
+ * @LastEditors: Jennifer
+ * @LastEditTime: 2022-11-04 11:45:39
 -->
+
 <template>
   <div class="footer">
     <div class="foot" style="z-index: 999">
@@ -28,24 +29,23 @@ export default {
 }
 </script>
 <style lang="less">
-
 .foot {
   width: 100%;
 
   .footBg {
-    width: 12rem;
-  padding: .32rem calc(50% - 6rem);
-
+    width: 100%;
+    padding: .32rem calc(50% - 6rem);
     height: 300px;
     background: #437661;
-    position: relative;
+    position: fixed;
+    z-index: 999;
+    bottom: 0;
     display: flex;
     justify-content: center;
 
     .bottomText {
       display: flex;
       align-items: center;
-
       span {
         color: #FFF;
         text-indent: 2em;

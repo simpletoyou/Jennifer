@@ -1,11 +1,4 @@
-<!--
- * @Description: 
- * @version: 
- * @Author: chenchuhua
- * @Date: 2021-04-22 14:26:50
- * @LastEditors: chenchuhua 3361694095@qq.com
- * @LastEditTime: 2022-09-30 15:32:26
--->
+
 <template>
   <div class="learn-container">
     <!-- 背景图 -->
@@ -89,13 +82,12 @@ export default {
 
   article {
     color: #FFF;
-    width: 100%;
     display: flex;
     justify-content: center;
 
     .inner-box {
       margin-top: 8%;
-      max-width: 1000px;
+      width: 12rem;
       display: flex;
       flex-direction: column;
 

@@ -1,11 +1,4 @@
-<!--
- * @Author: chenchuhua 3361694095@qq.com
- * @Date: 2022-08-05 09:26:22
- * @LastEditors: chenchuhua 3361694095@qq.com
- * @LastEditTime: 2022-09-30 15:38:53
- * @FilePath: \nft-adminf:\my\shushu\src\components\life.vue
- * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
--->
+
 <template>
   <div class="life-container">
     <page-header></page-header>
@@ -18,7 +11,6 @@
           {{ lifeData.year }}
         </div>
         <div class="seasonsBox">
-
           <div class="season" v-for="(item, index) in lifeData.seasons" :key="index">
             <div class="name">{{ item.content.title }}</div>
             <div class="desc">{{ item.content.desc }}</div>

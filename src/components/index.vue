@@ -39,6 +39,7 @@
   </div>
 </template>
 
+
 <script>
 import pageHeader from "./pageHeader.vue";
 import pageFooter from "./pageFooter.vue";
@@ -206,10 +207,10 @@ export default {
         display: flex;
         align-items: stretch;
         justify-content: space-between;
-        margin-bottom: 1rem;
+        // margin-bottom: 1rem;
 
         img {
-          width: 5rem;
+          width: 7rem;
           height: auto;
         }
 
@@ -322,7 +323,7 @@ export default {
     height: .6rem;
     border-radius: .3rem;
     z-index: 10;
-    background-color: @lightTheme;
+    background-color: rgba(158, 207, 186, .41);
     transition: 0.3s ease-in-out;
     font-size: .3rem;
     text-align: center;

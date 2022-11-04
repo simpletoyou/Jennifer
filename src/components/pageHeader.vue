@@ -1,11 +1,12 @@
 <!--
- * @Author: chenchuhua 3361694095@qq.com
- * @Date: 2022-08-03 16:17:48
- * @LastEditors: chenchuhua 3361694095@qq.com
- * @LastEditTime: 2022-08-16 10:56:24
- * @FilePath: \my\shushu\src\components\pageHeader.vue
- * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+ * @Descripttion: 
+ * @version: 
+ * @Author: Jennifer
+ * @Date: 2022-08-08 09:45:26
+ * @LastEditors: Jennifer
+ * @LastEditTime: 2022-11-04 11:45:44
 -->
+
 
 <template>
   <nav>
@@ -56,7 +57,7 @@ nav {
   top: 0;
   font-size: .16rem;
   background: #437661;
-  width: 12rem;
+  width: 100%;
   padding: .32rem calc(50% - 6rem);
 
   ul {
