@@ -4,34 +4,31 @@
     <page-header></page-header>
     <article>
       <div class="container">
-        <div class="year">
+        <!-- <div class="year">
           <span></span>
           <span></span>
           <span></span>
           {{ lifeData.year }}
-        </div>
+        </div> -->
         <div class="seasonsBox">
           <div class="season" v-for="(item, index) in lifeData.seasons" :key="index">
             <div class="name">{{ item.content.title }}</div>
             <div class="desc">{{ item.content.desc }}</div>
-            <div class="writesBox" :class="'swiper-container'+index" style="width: 600px; height: 300px;">
-              <div class="swiper-wrapper" style="border:2px solid red;width: 100%;">
+            <div class="writesBox">
+              <div class="write" v-for="(i, idx) in item.content.writes" :key="idx">
+                <div class="title">
+                  <div class="line lineLeft"></div>
+                  {{ i.title }}
+                  <div class="line lineRight"></div>
 
-                <div class="write swiper-slide" v-for="(i, idx) in item.content.writes" :key="idx">
-                  <div class="title">
-                    <div class="line lineLeft"></div>
-                    {{ i.title }}
-                    <div class="line lineRight"></div>
-
+                </div>
+                <div class="time">{{ i.time }}</div>
+                <div class="author">{{ i.author }}</div>
+                <div class="writeContent">
+                  <div class="imgBox">
+                    <img v-for="(item, index) in imgs" :key="index" :src="item" alt="">
                   </div>
-                  <div class="time">{{ i.time }}</div>
-                  <div class="author">{{ i.author }}</div>
-                  <!-- <div class="writeContent">
-                    <div class="imgBox">
-                      <img v-for="(item, index) in imgs" :key="index" :src="item" alt="">
-                    </div>
-                    <div class="article">{{ i.article }}</div>
-                  </div> -->
+                  <div class="article">{{ i.article }}</div>
                 </div>
               </div>
             </div>
@@ -92,7 +89,7 @@
 <script>
 import pageHeader from './pageHeader.vue'
 import pageFooter from './pageFooter.vue'
-import Swiper from "swiper";
+// import Swiper from "swiper";
 
 export default {
   data() {
@@ -108,13 +105,13 @@ export default {
   mounted() {
     this.lifeData = this.$lifes.life;
 
-    for (let i = 0; i < 4; i++) {
-      console.log({ i });
-      new Swiper('.swiper-container' + i, {
-        autoplay: 5000,//可选选项，自动滑动
-        loop: true,//可选选项，开启循环
-      })
-    }
+    // for (let i = 0; i < 4; i++) {
+    //   console.log({ i });
+    //   new Swiper('.swiper-container' + i, {
+    //     autoplay: 5000,//可选选项，自动滑动
+    //     loop: true,//可选选项，开启循环
+    //   })
+    // }
   },
   methods: {
   }
@@ -203,11 +200,7 @@ export default {
 
 
         .season {
-
-          border: 1px solid #FFF;
-          border-radius: 4px;
-          padding: .3rem .2rem;
-          margin-bottom: .3rem;
+          margin-bottom: .5rem;
 
           .name {
             font-size: .8rem;
@@ -231,7 +224,7 @@ export default {
             align-content: center;
             justify-content: space-between;
             padding: .4rem 0;
-            overflow-x: scroll;
+            // overflow-x: scroll;
 
 
             .write {
@@ -239,10 +232,10 @@ export default {
               flex-direction: column;
               border: 1px solid #FFF;
               border-radius: 4px;
-              margin-right: .3rem;
-              width: 5rem;
+              margin: 0 .3rem;
+              width: 50%;
               text-align: center;
-              padding: .2rem .1rem;
+              padding: .2rem;
 
               .title {
                 font-size: .2rem;

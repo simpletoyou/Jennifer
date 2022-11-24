@@ -355,5 +355,9 @@ export default {
     transition: .5s ease-in-out;
     bottom: 1rem;
   }
+
+  @media screen and (max-width: 800px) {
+   
+  }
 }
 </style>

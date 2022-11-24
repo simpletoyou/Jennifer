@@ -3,8 +3,8 @@
  * @version: 
  * @Author: chenchuhua
  * @Date: 2021-04-22 14:26:50
- * @LastEditors: chenchuhua 3361694095@qq.com
- * @LastEditTime: 2022-08-09 14:24:23
+ * @LastEditors: Jennifer
+ * @LastEditTime: 2022-11-24 10:07:06
 -->
 <template>
   <!-- 设置粒子背景 -->
@@ -25,7 +25,6 @@ export default {
 </script>
 
 <style>
-
 .demo {
   position: relative;
   width: 100vw;
@@ -55,14 +54,20 @@ body {
   background: #5c917b;
   color: #FFF;
   box-sizing: border-box;
-  
-  
 }
 
-::-webkit-scrollbar{display:none}
+::-webkit-scrollbar {
+  display: none;
+}
 
 ul {
   margin: 0;
   padding: 0;
+}
+
+@media screen and (max-width: 800px) {
+  body {
+    /* background: red; */
+  }
 }
 </style>

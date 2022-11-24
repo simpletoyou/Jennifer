@@ -115,7 +115,7 @@ export default {
 
   article {
     position: absolute;
-    top: 42%;
+    top: 35%;
     width: 94%;
     text-align: center;
     display: flex;

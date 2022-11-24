@@ -4,7 +4,7 @@
  * @Author: Jennifer
  * @Date: 2022-08-08 09:45:26
  * @LastEditors: Jennifer
- * @LastEditTime: 2022-11-04 11:45:39
+ * @LastEditTime: 2022-11-24 09:41:45
 -->
 
 <template>
@@ -37,8 +37,8 @@ export default {
     padding: .32rem calc(50% - 6rem);
     height: 300px;
     background: #437661;
-    position: fixed;
-    z-index: 999;
+    // position: fixed;
+    // z-index: 999;
     bottom: 0;
     display: flex;
     justify-content: center;
